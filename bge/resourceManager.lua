@@ -42,9 +42,12 @@ function rsm:loadImages(path)
   local id,res
 
   for i,v in ipairs(dir) do
-    id = string.sub(dir[i],1,-5)
-    res = path..dir[i]
-    self:addImg(res,id)
+    local ext = string.sub(dir[i],-4)
+    if  ext == '.png' or ext == '.png' then
+      id = string.sub(dir[i],1,-5)
+      res = path..dir[i]
+      self:addImg(res,id)
+    end
   end
 end
 
@@ -109,10 +112,12 @@ function rsm:loadSounds(path)
   local id,res
 
   for i,v in ipairs(dir) do
-    id = string.sub(dir[i],1,-5)
-    res = path..dir[i]
-
-    self:addAud(res,id)
+    local ext = string.sub(dir[i],-4)
+    if  ext == '.mp3' or ext == '.wav' then
+      id = string.sub(dir[i],1,-5)
+      res = path..dir[i]
+      self:addAud(res,id)
+    end
   end
 end
 

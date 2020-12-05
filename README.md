@@ -1,1 +1,1 @@
-# a_bow
+# The Bow of Artemis

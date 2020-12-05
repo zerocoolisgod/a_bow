@@ -6,10 +6,20 @@ gsm.currentState = ""
 gsm.nextState = ""
 gsm.states = {}
 
+local function lError(msg)
+  love.errhand(msg)
+  love.event.quit()
+end
+
 
 function gsm:updateState(dt)
 	if self.currentState ~= self.nextState then 
 		self.currentState = self.nextState
+		
+		if not self.states[self.currentState] then
+			lError(self.currentState..' is not a valid game state.')
+		end
+		
 		self.states[self.currentState]:init()
 	end
 	

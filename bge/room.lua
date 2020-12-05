@@ -23,8 +23,9 @@ local lgDraw = love.graphics.draw
 
 local Room = {}
 
-function Room:new( )
+function Room:new(id)
   local e = {}
+  e.id = id or "blank Room"
   e.screen = {x=0, y=0, w=0, h=0}
   e.tileset = {}
   e.tsQuads = {}
@@ -43,6 +44,8 @@ function Room:new( )
     love.graphics.setBackgroundColor(self.backGroundColor)
     self:loadObjectLayer()
     camera:setLimit(limitX, limitY)
+    BGE.entitySystem:clearEnts()
+    BGE.entitySystem:registerEntityTable(self:getRoomEntities())
   end
   
 
@@ -151,7 +154,7 @@ function Room:new( )
   end
 
   function e:update(dt)
-    entitySystem:updateEnts(dt)
+    BGE.entitySystem:updateEnts(dt)
   end
 
 
@@ -171,7 +174,7 @@ function Room:new( )
         lgDraw(self.tileBatch[l], x, y) 
       end
     end
-    entitySystem:drawEnts()
+    BGE.entitySystem:drawEnts()
   end
 
   return e

@@ -23,6 +23,7 @@ end
 
 
 function e:setMapSize (width, height, depth)
+  -- 1 is always the lowes depth
   width = width or 5
   height = height or 5
   depth = depth or 3
@@ -32,7 +33,7 @@ function e:setMapSize (width, height, depth)
     for y = 1, height do 
       self.map[x][y] = {}
       for z = 1, depth do
-        self.map[x][y][z] = Room:new()
+        self.map[x][y][z] = {} --Room:new()
       end
     end
   end
@@ -60,8 +61,10 @@ function e:newRoom(fullPath,xpos,ypos,zpos)
   local x,y,z = xpos or mapFile.properties["x"], ypos or mapFile.properties["y"], xpos or mapFile.properties["z"]
   
   if x and y and z then
-    local r = Room:new()
+    local id =mapFile.properties["id"]
+    local r = Room:new(id)
     r:loadLayersFromMap(mapFile)
+
     self:addRoom(r, x, y, z)
   else
     print("MapFile "..fullPath.." Needs x, y, and z properties to be loaded from path!")

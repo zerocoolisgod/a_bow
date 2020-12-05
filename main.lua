@@ -24,11 +24,11 @@ local why = "wtf"
 -------------------------------------------------------------------------------
 function love.load(arg)
   BGE:load()
+  BGE.gameStateSystem:addState("loadGame", require("gamestates.loadGame"))
+  BGE.gameStateSystem:addState("playGame", require("gamestates.playGame"))
 
-  local plr = newPlayer(16,16)
-  BGE.entitySystem:addEntity(plr)
-  BGE.camera:setFocus(plr)
-  makeWalls()
+  BGE:setUseGameStates(true)
+  BGE.gameStateSystem:setState("loadGame")  
 end
 
 
@@ -56,8 +56,8 @@ end
 
 
 function love.keypressed(key, isrepeat)
-  if key == 'escape' or key == 'q' then love.event.quit() end
-  if key == "f" then _CAMERA:toggleFullscreen() end
+  if key == 'escape' then love.event.quit() end
+  if key == "f11" then BGE.camera:toggleFullscreen() end
 end
 
 
@@ -70,43 +70,3 @@ end
 
 
 
--------------------------------------------------------------------------------
--- Entites
--------------------------------------------------------------------------------
-function newPlayer(x,y)
-  local p = BGE.objects.entity:new(x,y,16,16)
-  p:addRectangle({0.2, 0.2, 1, 1})
-  p:addCollision(true)
-  p:addMovement()
-  
-
-  p:addOnUpdate(
-    function(self, dt)
-      local moveSpeedX, moveSpeedY = 0,0
-      local AccelerationX, AccelerationY = 1,1
-      
-      if BGE.inputManager:isDown("up") then moveSpeedY = -80 end
-      if BGE.inputManager:isDown("down") then moveSpeedY = 80 end
-      if BGE.inputManager:isDown("left") then moveSpeedX = -80 end
-      if BGE.inputManager:isDown("right") then moveSpeedX = 80 end
-      
-      self:move(moveSpeedX, moveSpeedY, AccelerationX, AccelerationY, dt)
-    end
-  )
-  
-  return p
-end
-
-
-function newWall(x,y)
-  local e = BGE.objects.entity:new(x,y,16,16)
-  e:addRectangle({0.2, 1, 0.2, 1})
-  e:addCollision(true)
-  return e
-end
-
-function makeWalls()
-  for x = 3, 11 do
-    BGE.entitySystem:addEntity(newWall(x*16, 100))
-  end
-end

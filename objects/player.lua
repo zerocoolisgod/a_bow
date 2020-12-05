@@ -1,14 +1,11 @@
 
--- local logicComponents   = BGE.logicComponents
--- local renderComponents  = BGE.renderComponents
-
 entity = {}
 function entity:new(x,y)
   local p = BGE.objects.entity:new(x,y,16,16)
   p:addRectangle({0.2, 0.2, 1, 1})
   p:addCollision(true)
   p:addMovement()
-  
+w  
 
   p:addOnUpdate(
     function(self, dt)

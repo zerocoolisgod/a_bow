@@ -16,6 +16,7 @@ ipm.inputs = {
 }
 
 
+-- needs to be fixed for changing joystick keys
 function ipm:setInput(id, key)
   self.inputs[id].key = key
 end

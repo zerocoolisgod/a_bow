@@ -1,4 +1,4 @@
--- Princess Game DX
+-- Basic Game Engine
 
 -- Imports
 BGE = require("bge.basicGameEngine")

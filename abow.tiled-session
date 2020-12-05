@@ -1,0 +1,52 @@
+{
+    "activeFile": "F:/Dev/love/Basic-Game-Engine/media/map/testMap.tmx",
+    "expandedProjectPaths": [
+    ],
+    "exportAsImage.drawTileGrid": false,
+    "exportAsImage.includeBackgroundColor": false,
+    "exportAsImage.useCurrentScale": false,
+    "exportAsImage.visibleLayersOnly": true,
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "F:/Dev/love/Basic-Game-Engine/media/imgProjFiles/test_Tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "F:/Dev/love/Basic-Game-Engine/media/map/testMap.tmx": {
+            "scale": 3.112239583333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 154.8723956154297,
+                "y": 106.35427997657102
+            }
+        },
+        "media/image/test_Tiles.tsx": {
+            "scaleInDock": 1
+        }
+    },
+    "map.fixedSize": true,
+    "map.height": 32,
+    "map.lastUsedExportFilter": "Lua files (*.lua)",
+    "map.orientation": 1,
+    "map.tileHeight": 8,
+    "map.tileWidth": 8,
+    "map.width": 32,
+    "openFiles": [
+        "F:/Dev/love/Basic-Game-Engine/media/map/testMap.tmx"
+    ],
+    "project": "",
+    "property.type": "int",
+    "recentFiles": [
+        "F:/Dev/love/Basic-Game-Engine/media/map/testMap.tmx"
+    ],
+    "tileset.embedInMap": false,
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.margin": 0,
+    "tileset.spacing": 0,
+    "tileset.tileSize": {
+        "height": 8,
+        "width": 8
+    },
+    "tileset.transparentColor": "#ff00ff",
+    "tileset.type": 0,
+    "tileset.useTransparentColor": false
+}

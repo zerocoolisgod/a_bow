@@ -10,6 +10,7 @@ return {
   tileheight = 16,
   nextlayerid = 3,
   nextobjectid = 16,
+  backgroundcolor = { 32, 32, 32 },
   properties = {
     ["id"] = "testMap",
     ["x"] = 1,
@@ -20,7 +21,7 @@ return {
     {
       name = "test_Tiles",
       firstgid = 1,
-      filename = "../imgProjFiles/test_Tiles.tsx",
+      filename = "../image/test_Tiles.tsx",
       tilewidth = 16,
       tileheight = 16,
       spacing = 2,

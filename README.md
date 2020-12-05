@@ -1,1 +1,2 @@
-# The Bow of Artemis
+# Basic Game Engine
+Template for all new games

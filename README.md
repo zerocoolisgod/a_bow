@@ -1,2 +1,2 @@
-# Basic Game Engine
-Template for all new games
+# The Bow of Artemis
+Save the island of Crete from the Hydra

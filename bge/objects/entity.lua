@@ -77,8 +77,8 @@ function entity:new(x,y,w,h)
 		return self.size.w, self.size.h
 	end
   
-  -----------------------------------------------------------------------------
-	-- Componants
+  --===========================================================================
+	-- Logic Components
   function e:addOnUpdate(func)
     logicComponents:addOnUpdate(self, func)
   end
@@ -107,8 +107,10 @@ function entity:new(x,y,w,h)
   function e:addState(id, init, state)
     logicComponents:addState(self, id, init, state)
   end
-  
-  
+	
+	
+	--===========================================================================
+	-- Render Components
   function e:addOnDraw(func)
     renderComponents:addOnDraw(self, func)
   end
@@ -119,8 +121,8 @@ function entity:new(x,y,w,h)
   end
   
   
-  function e:addSprite(sheet, width, height, quad)
-    renderComponents:addSprite(self, sheet, width, height, quad)
+	function e:addSprite(sheet, width, height, frame, imageMargin, frameSpacing)
+    renderComponents:addSprite(self, sheet, width, height, frame, imageMargin, frameSpacing)
   end
   
   

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="gate" color="#03a41b">
+  <property name="mapDestX" type="int" default="0"/>
+  <property name="mapDestY" type="int" default="0"/>
+  <property name="mapDestZ" type="int" default="0"/>
+  <property name="playerDestX" type="int" default="0"/>
+  <property name="playerDestY" type="int" default="0"/>
+ </objecttype>
+ <objecttype name="hazard" color="#a40002"/>
+ <objecttype name="player" color="#4eadff"/>
+ <objecttype name="wall" color="#ffef0a"/>
+</objecttypes>

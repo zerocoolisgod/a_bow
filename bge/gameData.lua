@@ -2,7 +2,7 @@
 -- Game Data Object
 ---------------------------------------
 -- The majority of Game spacific Global Variables.
--- The only table needed to ba saved and loaded for save/load functionality.
+-- The only table needed to be saved and loaded for save/load functionality.
 -----------------------------
 
 

@@ -36,20 +36,20 @@ function renSys:addRectangle(ent, c)
 end
 
 
-function renSys:addSprite(ent, sheet, width, height, quad)
+function renSys:addSprite(ent, sheet, width, height, frame, imageMargin, frameSpacing)
   if not BGE.resourceManager then 
     love.errhand("BGE.resourceManager needs to be globally accessable!")
     love.event.quit()
   end
 
-  local margin,spacing = 0, 0
-  if _USE_BUFFERED_SPRITESHEETS then
-    margin = 1
-    spacing = 2
-  end
-
+	-- When using a buffert sprite/tile Sheet
+	-- which you should be;
+	-- Margin is pixels around whole image, usually 1
+	-- Spacing is pexeles between frames, usually 2
+	local margin, spacing = imageMargin or 0, frameSpacing or 0
+	  
 	ent.sheet = sheet
-  ent.frame = quad or 1
+  ent.frame = frame or 1
   ent.quads = BGE.resourceManager:getQuads(sheet, width, height, margin, spacing)
 	ent.scale = {x = 1, y = 1}
 	ent.radian = 0
@@ -72,7 +72,10 @@ function renSys:addSprite(ent, sheet, width, height, quad)
 		self.radian = r or 0
 	end
     
-  function ent:setSpriteOffset(x,y)
+	function ent:setSpriteOffset(x,y)
+		-- adjust where the sprite is drawn
+		-- bear in mind renering happens from the center
+		-- of object
 		self.offset.x = x or 0
     self.offset.y = y or x or 0
 	end

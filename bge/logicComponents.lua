@@ -26,6 +26,7 @@ end
 
 
 function logSys:addAnimation(ent, aId, frms, dly)
+	-- must add sprite first
 	if not ent.anms then ent.anms={} end
 	ent.anms[aId] = {
 		frames = frms,

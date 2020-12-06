@@ -8,8 +8,8 @@ return {
   height = 11,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 3,
-  nextobjectid = 16,
+  nextlayerid = 4,
+  nextobjectid = 20,
   backgroundcolor = { 32, 32, 32 },
   properties = {
     ["id"] = "testMap",
@@ -26,10 +26,10 @@ return {
       tileheight = 16,
       spacing = 2,
       margin = 1,
-      columns = 1,
+      columns = 3,
       image = "../image/test_Tiles.png",
-      imagewidth = 18,
-      imageheight = 108,
+      imagewidth = 54,
+      imageheight = 36,
       objectalignment = "unspecified",
       tileoffset = {
         x = 0,
@@ -53,6 +53,34 @@ return {
       y = 0,
       width = 20,
       height = 11,
+      id = 3,
+      name = "Tile Layer 2",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      properties = {},
+      encoding = "lua",
+      data = {
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+        6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 20,
+      height = 11,
       id = 1,
       name = "Tile Layer 1",
       visible = true,
@@ -62,17 +90,17 @@ return {
       properties = {},
       encoding = "lua",
       data = {
-        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-        2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2,
-        2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
-        2, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2,
-        2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2,
-        2, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 2,
-        2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2,
-        2, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 2,
-        2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
-        2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2,
-        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2
+        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 2, 2, 2, 3,
+        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 3,
+        3, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 3,
+        3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3,
+        3, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 3,
+        3, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 3,
+        3, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 3,
+        3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3,
+        3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3,
+        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3
       }
     },
     {
@@ -86,19 +114,6 @@ return {
       offsety = 0,
       properties = {},
       objects = {
-        {
-          id = 1,
-          name = "player",
-          type = "player",
-          shape = "rectangle",
-          x = 144,
-          y = 80,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
         {
           id = 2,
           name = "wall",
@@ -267,6 +282,65 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 16,
+          name = "",
+          type = "wall",
+          shape = "rectangle",
+          x = 256,
+          y = 16,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 17,
+          name = "",
+          type = "wall",
+          shape = "rectangle",
+          x = 288,
+          y = 16,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 18,
+          name = "",
+          type = "wall",
+          shape = "rectangle",
+          x = 272,
+          y = 16,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 19,
+          name = "",
+          type = "gate",
+          shape = "rectangle",
+          x = 272,
+          y = 32,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["mapDestX"] = 2,
+            ["mapDestY"] = 1,
+            ["mapDestZ"] = 1,
+            ["playerDestX"] = 158,
+            ["playerDestY"] = 144,
+            ["playerFace"] = "up"
+          }
         }
       }
     }

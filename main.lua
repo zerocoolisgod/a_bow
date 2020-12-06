@@ -25,6 +25,7 @@ local why = "wtf"
 function love.load(arg)
   BGE:load()
   BGE.gameStateSystem:addState("loadGame", require("gamestates.loadGame"))
+  BGE.gameStateSystem:addState("mapChange", require("gamestates.mapChange"))
   BGE.gameStateSystem:addState("playGame", require("gamestates.playGame"))
 
   BGE:setUseGameStates(true)

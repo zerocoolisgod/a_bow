@@ -1,12 +1,18 @@
-Map Transition
-NPC dialog
-GAME_DATA variables
-Map out the island
-get the game to complete with programer art and no combat
-winGame state
-playerDeath state
-combat state
+every day
+  backport changed to BGE to the bge repo
 
-art and Map
-sound
-title scree0n
+Major
+  --Map Transition
+  NPC dialog
+  GAME_DATA variables
+  Map out the island
+  get the game to complete with programer art and no combat
+  winGame state
+  playerDeath state
+  combat state
+  ingame map
+
+Last
+  art and Map
+  sound
+  title screen

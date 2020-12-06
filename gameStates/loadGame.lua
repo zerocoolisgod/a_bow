@@ -15,6 +15,10 @@ function state:init()
   BGE.overWorld:setMapSize(8,8,3)
   BGE.overWorld:loadMaps("media/map/")
   
+  BGE.gameData:setWorldPosition(1,1,1)
+  BGE.gameData:setData("playerSpawn", {x = 160, y = 96})
+  BGE.gameData:setData("playerFace", "down")
+  
   BGE.gameStateSystem:setState("playGame")
 end
 

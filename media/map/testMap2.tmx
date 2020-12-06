@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="20" height="11" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="14">
+ <editorsettings>
+  <export target="testMap2.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="x" type="int" value="2"/>
+  <property name="y" type="int" value="1"/>
+  <property name="z" type="int" value="1"/>
+ </properties>
+ <tileset firstgid="1" source="../image/test_Tiles.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="20" height="11">
+  <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,
+2,2,2,2,2,2,2,2,0,0,0,0,2,2,2,2,2,2,2,2
+</data>
+ </layer>
+ <objectgroup id="2" name="Object Layer 1">
+  <object id="1" type="wall" x="0" y="0" width="32" height="32"/>
+  <object id="2" type="wall" x="32" y="0" width="256" height="16"/>
+  <object id="4" type="wall" x="288" y="0" width="32" height="32"/>
+  <object id="5" type="wall" x="288" y="144" width="32" height="32"/>
+  <object id="6" type="wall" x="0" y="144" width="32" height="32"/>
+  <object id="7" type="wall" x="32" y="160" width="96" height="16"/>
+  <object id="8" type="wall" x="192" y="160" width="96" height="16"/>
+  <object id="9" type="wall" x="0" y="32" width="16" height="112"/>
+  <object id="10" type="wall" x="304" y="32" width="16" height="112"/>
+  <object id="11" type="gate" x="128" y="172" width="64" height="4">
+   <properties>
+    <property name="mapDestX" type="int" value="1"/>
+    <property name="mapDestY" type="int" value="1"/>
+    <property name="mapDestZ" type="int" value="1"/>
+    <property name="playerDestX" type="int" value="276"/>
+    <property name="playerDestY" type="int" value="55"/>
+    <property name="playerFace" value="down"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

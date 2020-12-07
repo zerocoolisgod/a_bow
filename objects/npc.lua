@@ -24,11 +24,17 @@ function entity:new(x,y)
   )
   
   function e:onAction()
+    local tq ={
+      "This is dialog!",
+      "so is this!!"
+    }
     -- add textbox data to gameData
     BGE.gameData:addData("textBoxData",{
       x=16,
-      y=16,
-      h=
+      y = 16,
+      h = 64,
+      w = 400,
+      t = tq}
     )
   end
   

@@ -28,12 +28,13 @@ function entity:new(x,y)
       "This is dialog!",
       "so is this!!"
     }
+    
     -- add textbox data to gameData
-    BGE.gameData:addData("textBoxData",{
+    BGE.gameData:setData("textBoxData",{
       x=16,
       y = 16,
       h = 64,
-      w = 400,
+      w = 300,
       t = tq}
     )
   end

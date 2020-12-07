@@ -49,12 +49,46 @@ function entity:new(x,y)
 
       if cAnm ~= nAnm then self:setAnimation(nAnm) end
       self:move(moveSpeedX, moveSpeedY, AccelerationX, AccelerationY, dt)
+      if BGE.inputManager:isPressed("btnA") then self:action() end
     end
   )
-  
+
+
   function p:setDirection(d)
     self:setAnimation(d)
   end
+  function p:getDirection()
+    return self:getAnimation()
+  end
+
+
+  p:addOnDraw(
+    function(self)
+      if self.dbox then
+        love.graphics.setColor(1,1,0)
+        love.graphics.rectangle("fill", self.dbox.x, self.dbox.y, self.dbox.w, self.dbox.h)
+        love.graphics.setColor(1,1,1)
+      end
+    end
+  )
+  
+  function p:action()
+    local rx = self.pos.x + (self.size.w / 2)
+    local ry = self.pos.y + (self.size.h / 2)
+
+    local dir = self:getDirection()
+    if dir == "up" then ry = self.pos.y - 4 end
+    if dir == "down" then ry = (self.pos.y + self.size.h) + 4 end
+    if dir == "left" then rx = self.pos.x - 4 end
+    if dir == "right" then rx = (self.pos.x + self.size.w) + 4 end
+    -- self.dbox = {x=rx,y=ry,w=1,h=1}
+    local o = BGE.collisionSystem:getEntityAtPoint(self,rx,ry)
+    if o and o.id == "npc" then
+      o:onAction()
+    end
+
+  end
+
 
   return p
 end

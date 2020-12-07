@@ -25,12 +25,13 @@ end
 function state:update(dt)
   if self.textBox then
     self:updateTextbox()
+    if self.cTextPos > #self.textQueue then 
+      self.textBox = nil
+      BGE.gameData:setData("textBoxData",nil)
+    end
   else 
     self.room:update(dt)
-  end
-
-  if self.cTextPos > #self.textQueue then 
-    self.textBox = nil
+    self:checkForTextbox()
   end
 end
 
@@ -39,7 +40,7 @@ function state:draw()
   self.room:draw()
   if self.textBox then
     self:drawTextbox()
-  else 
+  end
 end
 
 function state:keypressed(key, isrepeat)
@@ -75,6 +76,10 @@ function state:checkForTextbox()
     self.cTextPos = 1
     local text = self.textQueue[self.cTextPos]
     self.textBox = BGE.objects.textBox:new(tbd.x,tbd.y,tbd.w,tbd.h,text)
+    self.textBox:setWrapLimit(tbd.w)
+    self.textBox:setBackgroundColor()
+    self.textBox:setBorderColor({0.5,0.5,0.5,1})
+    self.textBox:setBorderSize(2)
   end
 end
 

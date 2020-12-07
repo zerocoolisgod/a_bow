@@ -42,13 +42,12 @@ function g:setData(id, value)
 end
 
 function g:getData(id)
-  if not self.userData[id] then 
-    love.errhand(id.." does not exist")
-    love.event.quit()
-  end
+  -- if not self.userData[id] then 
+  --   love.errhand(id.." does not exist")
+  --   love.event.quit()
+  -- end
 
-  return self.userData[id]
- 
+  return self.userData[id] 
 end
 
 

@@ -1,8 +1,9 @@
 -------------------------------------------------------------------------------
 -- Overworld map. 
--- Holds single screen rooms in a three dimensional array
+-- Holds rooms in a three dimensional array
 -- If Tiled tmx maps have "x,y,z" properties, an entire
 -- directory can be loadded with loadMaps()
+
 
 local Room = require("bge.room")
 

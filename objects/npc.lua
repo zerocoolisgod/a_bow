@@ -2,7 +2,7 @@
 entity = {}
 function entity:new(x,y)
   local e = BGE.objects.entity:new(x,y,16,16)
-  e.id = "npcA"
+  e.id = "npc"
   e:addCollision(true)
   e:addMovement()
 
@@ -24,6 +24,12 @@ function entity:new(x,y)
   )
   
   function e:onAction()
+    -- add textbox data to gameData
+    BGE.gameData:addData("textBoxData",{
+      x=16,
+      y=16,
+      h=
+    )
   end
   
 

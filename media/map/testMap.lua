@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 4,
-  nextobjectid = 20,
+  nextobjectid = 21,
   backgroundcolor = { 32, 32, 32 },
   properties = {
     ["id"] = "testMap",
@@ -116,7 +116,7 @@ return {
       objects = {
         {
           id = 2,
-          name = "wall",
+          name = "",
           type = "wall",
           shape = "rectangle",
           x = 0,
@@ -129,7 +129,7 @@ return {
         },
         {
           id = 4,
-          name = "wall",
+          name = "",
           type = "wall",
           shape = "rectangle",
           x = 304,
@@ -142,7 +142,7 @@ return {
         },
         {
           id = 5,
-          name = "wall",
+          name = "",
           type = "wall",
           shape = "rectangle",
           x = 16,
@@ -155,7 +155,7 @@ return {
         },
         {
           id = 6,
-          name = "wall",
+          name = "",
           type = "wall",
           shape = "rectangle",
           x = 16,
@@ -341,6 +341,19 @@ return {
             ["playerDestY"] = 144,
             ["playerFace"] = "up"
           }
+        },
+        {
+          id = 20,
+          name = "a",
+          type = "npc",
+          shape = "rectangle",
+          x = 48,
+          y = 32,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     }

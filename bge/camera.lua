@@ -207,7 +207,7 @@ end
 -------------------------------------------------------------------------------
 function Camera:getViewSize()
   -- Internal resolution.
-  return {x = self.viewSize.x, y = self.viewSize.y}
+  return {w = self.viewSize.x, h = self.viewSize.y}
 end
 
 

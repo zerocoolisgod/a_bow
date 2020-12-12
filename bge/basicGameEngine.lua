@@ -10,6 +10,7 @@ BGE.overWorld         = require("bge.overworldMap")
 BGE.mapTable          = require("bge.mapTable")
 BGE.inputManager      = require("bge.inputManager")
 BGE.entitySystem      = require("bge.entitySystem")
+BGE.GUISystem      = require("bge.GUISystem")
 BGE.logicComponents   = require("bge.logicComponents")
 BGE.renderComponents  = require("bge.renderComponents")
 BGE.palettes          = require("bge.palettes")
@@ -50,6 +51,7 @@ function BGE:gsmUpdate(dt)
   self.gameStateSystem:updateState(dt)
   if self.onUpdate then self:onUpdate(dt) end
   self.camera:update(dt)
+  self.GUISystem:updateObjects(dt)
 end
 
 function BGE:gsmDraw()
@@ -57,6 +59,7 @@ function BGE:gsmDraw()
   self.gameStateSystem:drawState()
   if self.onDraw then self:onDraw() end
   self.camera:unset()
+  self.GUISystem:drawObjects()
 end
 
 

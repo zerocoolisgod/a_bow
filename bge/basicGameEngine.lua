@@ -1,12 +1,13 @@
 -----------------------------
 -- Import Engine as Globals
 BGE = {}
-BGE.gameStateSystem  = require("bge.gameStateSystem")
+BGE.gameStateSystem   = require("bge.gameStateSystem")
 BGE.collisionSystem   = require("bge.collisionSystem")
 BGE.camera            = require("bge.camera")
 BGE.resourceManager   = require("bge.resourceManager")
 BGE.gameData          = require("bge.gameData")
 BGE.overWorld         = require("bge.overworldMap")
+BGE.mapTable          = require("bge.mapTable")
 BGE.inputManager      = require("bge.inputManager")
 BGE.entitySystem      = require("bge.entitySystem")
 BGE.logicComponents   = require("bge.logicComponents")

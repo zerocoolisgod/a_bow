@@ -12,7 +12,6 @@ return {
   nextobjectid = 21,
   backgroundcolor = { 32, 32, 32 },
   properties = {
-    ["id"] = "testMap",
     ["x"] = 1,
     ["y"] = 1,
     ["z"] = 1
@@ -334,9 +333,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["mapDestX"] = 2,
-            ["mapDestY"] = 1,
-            ["mapDestZ"] = 1,
+            ["mapDestination"] = "testMap2",
             ["playerDestX"] = 158,
             ["playerDestY"] = 144,
             ["playerFace"] = "up"

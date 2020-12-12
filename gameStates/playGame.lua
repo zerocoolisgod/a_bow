@@ -13,6 +13,7 @@ function state:init()
   local face = BGE.gameData:getData("playerFace")
   local p = BGE.resourceManager:getNewEntity("player", ps.x, ps.y)
   p:setDirection(face)
+  BGE.camera:setFocus(p)
   BGE.entitySystem:addEntity(p)
 end
 

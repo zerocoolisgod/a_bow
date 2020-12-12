@@ -13,8 +13,8 @@ function state:init()
   --BGE.mapTable:setMapSize(8,8,3)
   BGE.mapTable:loadMaps("media/map/")
   
-  BGE.gameData:setData("nextMap", "testMap")
-  BGE.gameData:setData("playerSpawn", {x = 160, y = 96})
+  BGE.gameData:setData("nextMap", "knososVillage")
+  BGE.gameData:setData("playerSpawn", {x = 240, y = 200})
   BGE.gameData:setData("playerFace", "down")
   
   BGE.gameStateSystem:setState("playGame")

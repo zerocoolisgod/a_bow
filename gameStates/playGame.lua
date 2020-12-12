@@ -71,11 +71,11 @@ function state:checkForTextbox()
     local text = self.textQueue[self.cTextPos]
     
     local vs = BGE.camera:getViewSize()
-    local tbx = 16
-    local tby = (vs.h - tbd.h) - 24
-    local tbw = (vs.w - tbx) - 16
+    local vp = BGE.camera:getPos()
+    local tbx = vp.x + 16
+    local tby = vp.y + ((vs.h - tbd.h) - 8)
+    local tbw = vs.w - 32
     local tbh = tbd.h
-    print(vs.w)
 
     self.textBox = BGE.objects.textBox:new(tbx, tby, tbw, tbh, text)
     self.textBox:setWrapLimit(tbd.w)

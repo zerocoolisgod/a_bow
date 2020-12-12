@@ -2,8 +2,8 @@ every day
   backport changed to BGE to the bge repo
 
 Major
-  --Map Transition
-  NPC dialog
+  -- Map Transition
+  -- NPC dialog
   GAME_DATA variables
   Map out the island
   get the game to complete with programer art and no combat

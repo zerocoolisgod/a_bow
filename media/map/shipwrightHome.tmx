@@ -53,6 +53,6 @@
     <property name="playerFace" value="down"/>
    </properties>
   </object>
-  <object id="20" name="a" type="npc" x="39.2018" y="57.4424" width="16" height="16"/>
+  <object id="20" name="a" type="npc" x="56.2018" y="104.442" width="16" height="16"/>
  </objectgroup>
 </map>

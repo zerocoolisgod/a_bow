@@ -11,23 +11,6 @@ local e = { }
 
 e.map = {}
 
--- function e:setMapSize (width, height, depth)
---   -- 1 is always the lowes depth
---   width = width or 5
---   height = height or 5
---   depth = depth or 3
-  
---   for x = 1, width do
---     self.map[x] = {}
---     for y = 1, height do 
---       self.map[x][y] = {}
---       for z = 1, depth do
---         self.map[x][y][z] = {} --Room:new()
---       end
---     end
---   end
--- end
-
 
 function e:loadMaps(path)
   -- takes every map in $path and adds it to

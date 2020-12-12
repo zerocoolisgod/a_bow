@@ -4,20 +4,15 @@ local state={}
 
 
 function state:init()
-  local wx,wy,wz = BGE.gameData:getWorldPosition()
-  self.worldPos = {
-    x = wx,
-    y = wy,
-    z = wz
-  }
+  self.map = BGE.gameData:getData("nextMap")
 
-  self.room = BGE.overWorld:getRoom(self.worldPos.x, self.worldPos.y, self.worldPos.z)
+  self.room = BGE.mapTable:getRoom(self.map)
   self.room:initiate()
 
   local ps = BGE.gameData:getData("playerSpawn")
   local face = BGE.gameData:getData("playerFace")
   local p = BGE.resourceManager:getNewEntity("player", ps.x, ps.y)
-  p:setDirection(face) 
+  p:setDirection(face)
   BGE.entitySystem:addEntity(p)
 end
 
@@ -59,9 +54,7 @@ function state:joystickaxis(joystick, axis, value)
 end
 
 function state:checkMapChange()
-  local wx,wy,wz = BGE.gameData:getNextWoldPosition()
-  --local nwx,nwy,nwz = BGE.gameData:getNextWoldPosition()
-  if self.worldPos ~= {wx,wy,wz} then
+  if self.map ~= BGE.gameData:getData("nextMap") then
     BGE.gameStateManager:setState("mapChange")
   end
 end

@@ -98,10 +98,10 @@
   <object id="26" type="wall" x="336" y="240" width="16" height="16"/>
   <object id="27" type="gate" x="0" y="50" width="4" height="44">
    <properties>
-    <property name="mapDestination" value="elderHome"/>
-    <property name="playerDestX" type="int" value="158"/>
-    <property name="playerDestY" type="int" value="144"/>
-    <property name="playerFace" value="up"/>
+    <property name="mapDestination" value="mtIda"/>
+    <property name="playerDestX" type="int" value="1250"/>
+    <property name="playerDestY" type="int" value="273"/>
+    <property name="playerFace" value="left"/>
    </properties>
   </object>
   <object id="28" type="gate" x="0" y="258" width="4" height="44">

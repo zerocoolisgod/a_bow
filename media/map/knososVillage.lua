@@ -417,10 +417,10 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["mapDestination"] = "elderHome",
-            ["playerDestX"] = 158,
-            ["playerDestY"] = 144,
-            ["playerFace"] = "up"
+            ["mapDestination"] = "mtIda",
+            ["playerDestX"] = 1250,
+            ["playerDestY"] = 273,
+            ["playerFace"] = "left"
           }
         },
         {

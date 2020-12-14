@@ -16,29 +16,31 @@ function entity:new(x,y)
   e:setAnimation("down")
   
 
-
   e:addOnUpdate(
     function(self, dt)
   
     end
   )
   
+
   function e:onAction()
     local tq ={
       "This is dialog!",
       "so is this!!"
     }
-    
+  end
+
+
+  function e:addTextbox(t)
     -- add textbox data to gameData
     BGE.gameData:setData("textBoxData",{
-      x=16,
+      x = 16,
       y = 16,
       h = 64,
       w = 300,
-      t = tq}
-    )
+      t = t
+    })
   end
-  
 
   return e
 end

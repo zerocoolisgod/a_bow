@@ -20,7 +20,7 @@ function entity:new(x,y)
   p:addOnUpdate(
     function(self, dt)
       local moveSpeedX, moveSpeedY = 0,0
-      local maxSpeed = 50
+      local maxSpeed = 160
       local AccelerationX, AccelerationY = 1,1
       local cAnm = self:getAnimation()
       local nAnm = cAnm

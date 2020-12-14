@@ -83,7 +83,7 @@ function entity:new(x,y)
     if dir == "right" then rx = (self.pos.x + self.size.w) + 4 end
     -- self.dbox = {x=rx,y=ry,w=1,h=1}
     local o = BGE.collisionSystem:getEntityAtPoint(self,rx,ry)
-    if o and o.id == "npc" then
+    if o and o.group == "npc" then
       o:onAction()
     end
 

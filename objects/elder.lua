@@ -1,17 +1,10 @@
 
 entity = {}
-function entity:new(x, y, w, h, props)
-  if props.subtype then
-    return BGE.resourceManager:getNewEntity(props.subtype, x, y, w, h, props)
-  else
-    return self:genericNPC(x, y, w, h, props)
-  end
-end
-
-
-function entity:genericNPC(x, y, w, h, props)
+function entity:new(x,y)
   local e = BGE.objects.entity:new(x,y,16,16)
-  e.id = "npc"
+  e.id = "elder"
+  e.group = "npc"
+  
   e:addCollision(true)
   e:addMovement()
 
@@ -34,9 +27,12 @@ function entity:genericNPC(x, y, w, h, props)
 
   function e:onAction()
     local tq ={
-      "This is dialog!",
-      "so is this!!"
+      "I am the Village Elder.",
+      "Go to the Temple of Artemis and ask for her gift.",
+      "The Temple is located on top of Mt. Ida."
     }
+    
+    self:addTextbox(tq)
   end
 
 

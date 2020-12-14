@@ -28,7 +28,7 @@ return {
       columns = 3,
       image = "../image/test_Tiles.png",
       imagewidth = 54,
-      imageheight = 36,
+      imageheight = 54,
       objectalignment = "unspecified",
       tileoffset = {
         x = 0,
@@ -41,7 +41,7 @@ return {
       },
       properties = {},
       terrains = {},
-      tilecount = 6,
+      tilecount = 9,
       tiles = {}
     }
   },
@@ -201,13 +201,15 @@ return {
           name = "a",
           type = "npc",
           shape = "rectangle",
-          x = 248.333,
-          y = 55.6667,
+          x = 144,
+          y = 80,
           width = 16,
           height = 16,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["subtype"] = "elder"
+          }
         }
       }
     }

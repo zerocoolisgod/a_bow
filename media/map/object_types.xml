@@ -9,5 +9,8 @@
  <objecttype name="hazard" color="#a40002"/>
  <objecttype name="npc" color="#e70eee"/>
  <objecttype name="player" color="#4eadff"/>
+ <objecttype name="sign" color="#ff6e0e">
+  <property name="script" type="int" default="0"/>
+ </objecttype>
  <objecttype name="wall" color="#ffef0a"/>
 </objecttypes>

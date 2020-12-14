@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 4,
-  nextobjectid = 35,
+  nextobjectid = 36,
   backgroundcolor = { 32, 32, 32 },
   properties = {
     ["x"] = 1,
@@ -533,6 +533,21 @@ return {
           visible = true,
           properties = {
             ["script"] = 3
+          }
+        },
+        {
+          id = 35,
+          name = "doc",
+          type = "npc",
+          shape = "rectangle",
+          x = 612,
+          y = 211,
+          width = 4,
+          height = 10,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["subtype"] = "doc"
           }
         }
       }

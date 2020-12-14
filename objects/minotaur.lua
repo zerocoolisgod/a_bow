@@ -27,9 +27,16 @@ function entity:new(x,y)
 
   function e:onAction()
     local tq ={
-      "I am the Minotaur!",
-      "Now You DIE!!"
+      "I am defeated!"
     }
+    if not BGE.gameData:getData("hasBrokenBoat") then
+      tq = {
+        "I am the Minotaur!",
+        "Now You DIE!!"
+      }
+      BGE.gameData:setData("hasBrokenBoat", true)
+    end
+    self.remove = true
     self:addTextbox(tq)
   end
 

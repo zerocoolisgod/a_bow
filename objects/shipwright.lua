@@ -31,6 +31,18 @@ function entity:new(x,y)
       "Now You DIE!!",
       "lol, j/k, bring me a broken\nand I will fix it."
     }
+    if BGE.gameData:getData("hasBrokenBoat") then
+      tq = {
+        "Let me fix that for you."
+      }
+      BGE.gameData:setData("hasFixedBoat", true)
+    end
+
+    if BGE.gameData:getData("hasFixedBoat") then
+      tq = {
+        "Launch your boat from the Pier,\nand sail to the Hydra's Island."
+      }
+    end
     
     self:addTextbox(tq)
   end

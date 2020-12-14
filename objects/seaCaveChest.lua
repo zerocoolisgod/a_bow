@@ -2,9 +2,8 @@
 entity = {}
 function entity:new(x,y)
   local e = BGE.objects.entity:new(x,y,16,16)
-  e.id = "elder"
+  e.id = "Sea Cave Chest"
   e.group = "npc"
-  
   e:addCollision(true)
   e:addMovement()
 
@@ -26,36 +25,18 @@ function entity:new(x,y)
   
 
   function e:onAction()
-    local tq = {
-      "I am the Village Elder.",
-      "Go to the Temple of Artemis and\nask for her gift.",
-      "The Temple is located on top of\nMt. Ida."
+    local tq ={
+      "The chest is empty."
     }
-
-    if BGE.gameData:getData("hasBow") then
+    
+    if not BGE.gameData:getData("hasWings") then
       tq = {
-        "You must find the wings of\nIcarus so you can fly into the\nLabrynth."
+        "The chest opens.",
+        "You find the Wings of Icarus."
       }
+      BGE.gameData:setData("hasWings", true)
     end
-
-    if BGE.gameData:getData("hasWings") then
-      tq = {
-        "You must enter the Labrynth and\nget the boat of Theseus."
-      }
-    end
-
-    if BGE.gameData:getData("hasBrokenBoat") then
-      tq = {
-        "The Shipwright can fix Theseus' boat."
-      }
-    end
-
-    if BGE.gameData:getData("hasFixedBoat") then
-      tq = {
-        "Launch your boat from the Pier,\nand sail to the Hydra's Island."
-      }
-    end
-
+    
     self:addTextbox(tq)
   end
 

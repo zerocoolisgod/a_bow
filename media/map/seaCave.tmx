@@ -83,9 +83,9 @@
     <property name="subtype" value="enemy"/>
    </properties>
   </object>
-  <object id="23" name="enemy" type="npc" x="224" y="80" width="16" height="16">
+  <object id="23" name="seaCaveChest" type="npc" x="80" y="80" width="16" height="16">
    <properties>
-    <property name="subtype" value="enemy"/>
+    <property name="subtype" value="seaCaveChest"/>
    </properties>
   </object>
  </objectgroup>

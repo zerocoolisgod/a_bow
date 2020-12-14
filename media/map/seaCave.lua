@@ -274,17 +274,17 @@ return {
         },
         {
           id = 23,
-          name = "enemy",
+          name = "seaCaveChest",
           type = "npc",
           shape = "rectangle",
-          x = 224,
+          x = 80,
           y = 80,
           width = 16,
           height = 16,
           rotation = 0,
           visible = true,
           properties = {
-            ["subtype"] = "enemy"
+            ["subtype"] = "seaCaveChest"
           }
         }
       }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="60" height="11" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#202020" nextlayerid="4" nextobjectid="24">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="60" height="11" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#202020" nextlayerid="4" nextobjectid="25">
  <editorsettings>
   <export target="hydraIsland.lua" format="lua"/>
  </editorsettings>
@@ -70,9 +70,14 @@
     <property name="subtype" value="enemy"/>
    </properties>
   </object>
-  <object id="23" name="enemy" type="npc" x="848" y="80" width="16" height="16">
+  <object id="23" name="enemy" type="npc" x="768" y="112" width="16" height="16">
    <properties>
     <property name="subtype" value="enemy"/>
+   </properties>
+  </object>
+  <object id="24" name="doc" type="npc" x="54" y="83" width="4" height="10">
+   <properties>
+    <property name="subtype" value="doc"/>
    </properties>
   </object>
  </objectgroup>

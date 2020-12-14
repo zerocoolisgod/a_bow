@@ -16,6 +16,11 @@ function state:init()
   BGE.gameData:setData("nextMap", "knososVillage")
   BGE.gameData:setData("playerSpawn", {x = 240, y = 200})
   BGE.gameData:setData("playerFace", "down")
+
+  BGE.gameData:setData("hasBow", false)
+  BGE.gameData:setData("hasWings", false)
+  BGE.gameData:setData("hasBrokenBoat", false)
+  BGE.gameData:setData("hasFixedBoat", false)
   
   BGE.gameStateSystem:setState("playGame")
 end

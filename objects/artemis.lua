@@ -26,8 +26,15 @@ function entity:new(x,y)
 
   function e:onAction()
     local tq ={
-      "I am Artemis!"
+      "Use my bow to defeat the Hydra!"
     }
+    
+    if not BGE.gameData:getData("hasBow") then
+      tq = {
+        "I am Artemis, take my bow with\nmy blessing."
+      }
+      BGE.gameData:setData("hasBow", true)
+    end
     
     self:addTextbox(tq)
   end

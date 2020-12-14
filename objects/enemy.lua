@@ -26,12 +26,20 @@ function entity:new(x,y)
 
   function e:onAction()
     local tq ={
-      "I am an Enemy!!",
-      "Now you DIE!!"
+      "You have no way to fight this foe!",
+      "You run away!"
     }
+    
+    if BGE.gameData:getData("hasBow") then
+      tq = {
+        "I am an Enemy!!",
+        "Now you DIE!!"
+      }
+      self.remove = true
+    end
 
     self:addTextbox(tq)
-    self.remove = true
+    
   end
 
 

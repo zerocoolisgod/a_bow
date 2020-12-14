@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 4,
-  nextobjectid = 24,
+  nextobjectid = 25,
   backgroundcolor = { 32, 32, 32 },
   properties = {
     ["x"] = 1,
@@ -286,14 +286,29 @@ return {
           name = "enemy",
           type = "npc",
           shape = "rectangle",
-          x = 848,
-          y = 80,
+          x = 768,
+          y = 112,
           width = 16,
           height = 16,
           rotation = 0,
           visible = true,
           properties = {
             ["subtype"] = "enemy"
+          }
+        },
+        {
+          id = 24,
+          name = "doc",
+          type = "npc",
+          shape = "rectangle",
+          x = 54,
+          y = 83,
+          width = 4,
+          height = 10,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["subtype"] = "doc"
           }
         }
       }

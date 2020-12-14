@@ -57,6 +57,8 @@ function entity:new(x,y)
   function p:setDirection(d)
     self:setAnimation(d)
   end
+  
+  
   function p:getDirection()
     return self:getAnimation()
   end

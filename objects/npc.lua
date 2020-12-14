@@ -37,6 +37,7 @@ function entity:genericNPC(x, y, w, h, props)
       "This is dialog!",
       "so is this!!"
     }
+    self:addTextbox(tq)
   end
 
 

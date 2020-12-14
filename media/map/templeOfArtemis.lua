@@ -28,7 +28,7 @@ return {
       columns = 3,
       image = "../image/test_Tiles.png",
       imagewidth = 54,
-      imageheight = 36,
+      imageheight = 54,
       objectalignment = "unspecified",
       tileoffset = {
         x = 0,
@@ -41,7 +41,7 @@ return {
       },
       properties = {},
       terrains = {},
-      tilecount = 6,
+      tilecount = 9,
       tiles = {}
     }
   },
@@ -90,9 +90,9 @@ return {
       encoding = "lua",
       data = {
         2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-        2, 6, 6, 6, 0, 6, 6, 0, 6, 6, 6, 0, 6, 6, 0, 6, 0, 0, 0, 2,
-        2, 0, 6, 0, 0, 6, 6, 0, 6, 6, 6, 0, 6, 6, 0, 6, 0, 0, 0, 2,
-        2, 0, 6, 0, 0, 6, 6, 0, 6, 0, 6, 0, 6, 0, 0, 6, 6, 0, 0, 2,
+        2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
+        2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
+        2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
         2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
         2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
         2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
@@ -198,7 +198,7 @@ return {
         },
         {
           id = 20,
-          name = "a",
+          name = "artemis",
           type = "npc",
           shape = "rectangle",
           x = 144,
@@ -207,7 +207,9 @@ return {
           height = 16,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["subtype"] = "artemis"
+          }
         }
       }
     }

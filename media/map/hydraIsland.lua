@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 4,
-  nextobjectid = 22,
+  nextobjectid = 24,
   backgroundcolor = { 32, 32, 32 },
   properties = {
     ["x"] = 1,
@@ -249,19 +249,6 @@ return {
           }
         },
         {
-          id = 20,
-          name = "a",
-          type = "npc",
-          shape = "rectangle",
-          x = 208,
-          y = 80,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 21,
           name = "",
           type = "gate",
@@ -277,6 +264,36 @@ return {
             ["playerDestX"] = 32,
             ["playerDestY"] = 80,
             ["playerFace"] = "right"
+          }
+        },
+        {
+          id = 22,
+          name = "enemy",
+          type = "npc",
+          shape = "rectangle",
+          x = 176,
+          y = 80,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["subtype"] = "enemy"
+          }
+        },
+        {
+          id = 23,
+          name = "enemy",
+          type = "npc",
+          shape = "rectangle",
+          x = 848,
+          y = 80,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["subtype"] = "enemy"
           }
         }
       }

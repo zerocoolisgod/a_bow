@@ -55,6 +55,10 @@
     <property name="playerFace" value="left"/>
    </properties>
   </object>
-  <object id="20" name="a" type="npc" x="560" y="80" width="16" height="16"/>
+  <object id="20" name="hydra" type="npc" x="560" y="80" width="16" height="16">
+   <properties>
+    <property name="subtype" value="hydra"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

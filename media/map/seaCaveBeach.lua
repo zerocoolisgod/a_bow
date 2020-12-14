@@ -315,16 +315,18 @@ return {
         },
         {
           id = 20,
-          name = "a",
+          name = "enemy",
           type = "npc",
           shape = "rectangle",
-          x = 256,
-          y = 80,
+          x = 544,
+          y = 32,
           width = 16,
           height = 16,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["subtype"] = "enemy"
+          }
         },
         {
           id = 21,

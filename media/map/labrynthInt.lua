@@ -284,13 +284,15 @@ return {
           name = "a",
           type = "npc",
           shape = "rectangle",
-          x = 256,
-          y = 80,
+          x = 112,
+          y = 64,
           width = 16,
           height = 16,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["subtype"] = "minotaur"
+          }
         },
         {
           id = 21,

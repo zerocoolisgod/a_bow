@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="80" height="22" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#202020" nextlayerid="4" nextobjectid="24">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="80" height="22" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#202020" nextlayerid="4" nextobjectid="26">
  <editorsettings>
   <export target="mtIda.lua" format="lua"/>
  </editorsettings>
@@ -82,7 +82,6 @@
     <property name="playerFace" value="up"/>
    </properties>
   </object>
-  <object id="20" name="a" type="npc" x="672" y="240" width="16" height="16"/>
   <object id="21" type="wall" x="432" y="96" width="832" height="96"/>
   <object id="22" type="wall" x="160" y="128" width="272" height="64"/>
   <object id="23" type="gate" x="1276" y="224" width="4" height="96">
@@ -91,6 +90,16 @@
     <property name="playerDestX" type="int" value="32"/>
     <property name="playerDestY" type="int" value="64"/>
     <property name="playerFace" value="right"/>
+   </properties>
+  </object>
+  <object id="24" name="enemy" type="npc" x="672" y="272" width="16" height="16">
+   <properties>
+    <property name="subtype" value="enemy"/>
+   </properties>
+  </object>
+  <object id="25" name="enemy" type="npc" x="688" y="32" width="16" height="16">
+   <properties>
+    <property name="subtype" value="enemy"/>
    </properties>
   </object>
  </objectgroup>

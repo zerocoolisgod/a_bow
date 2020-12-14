@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 4,
-  nextobjectid = 24,
+  nextobjectid = 26,
   backgroundcolor = { 32, 32, 32 },
   properties = {
     ["x"] = 1,
@@ -28,7 +28,7 @@ return {
       columns = 3,
       image = "../image/test_Tiles.png",
       imagewidth = 54,
-      imageheight = 36,
+      imageheight = 54,
       objectalignment = "unspecified",
       tileoffset = {
         x = 0,
@@ -41,7 +41,7 @@ return {
       },
       properties = {},
       terrains = {},
-      tilecount = 6,
+      tilecount = 9,
       tiles = {}
     }
   },
@@ -310,19 +310,6 @@ return {
           }
         },
         {
-          id = 20,
-          name = "a",
-          type = "npc",
-          shape = "rectangle",
-          x = 672,
-          y = 240,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 21,
           name = "",
           type = "wall",
@@ -364,6 +351,36 @@ return {
             ["playerDestX"] = 32,
             ["playerDestY"] = 64,
             ["playerFace"] = "right"
+          }
+        },
+        {
+          id = 24,
+          name = "enemy",
+          type = "npc",
+          shape = "rectangle",
+          x = 672,
+          y = 272,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["subtype"] = "enemy"
+          }
+        },
+        {
+          id = 25,
+          name = "enemy",
+          type = "npc",
+          shape = "rectangle",
+          x = 688,
+          y = 32,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["subtype"] = "enemy"
           }
         }
       }

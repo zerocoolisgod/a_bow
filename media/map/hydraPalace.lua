@@ -224,7 +224,7 @@ return {
         },
         {
           id = 20,
-          name = "a",
+          name = "hydra",
           type = "npc",
           shape = "rectangle",
           x = 560,
@@ -233,7 +233,9 @@ return {
           height = 16,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["subtype"] = "hydra"
+          }
         }
       }
     }

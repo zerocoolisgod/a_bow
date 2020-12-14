@@ -31,6 +31,7 @@ function entity:new(x,y)
     }
 
     self:addTextbox(tq)
+    self.remove = true
   end
 
 

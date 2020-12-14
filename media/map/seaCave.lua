@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 4,
-  nextobjectid = 22,
+  nextobjectid = 24,
   backgroundcolor = { 32, 32, 32 },
   properties = {
     ["x"] = 1,
@@ -245,19 +245,6 @@ return {
           }
         },
         {
-          id = 20,
-          name = "a",
-          type = "npc",
-          shape = "rectangle",
-          x = 64,
-          y = 80,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 21,
           name = "",
           type = "wall",
@@ -269,6 +256,36 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 22,
+          name = "enemy",
+          type = "npc",
+          shape = "rectangle",
+          x = 528,
+          y = 240,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["subtype"] = "enemy"
+          }
+        },
+        {
+          id = 23,
+          name = "enemy",
+          type = "npc",
+          shape = "rectangle",
+          x = 224,
+          y = 80,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["subtype"] = "enemy"
+          }
         }
       }
     }

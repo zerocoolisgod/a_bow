@@ -27,9 +27,11 @@ function entity:new(x,y)
 
   function e:onAction()
     local tq ={
-      "This is dialog!",
-      "so is this!!"
+      "I am the Shipwight!",
+      "Now You DIE!!",
+      "lol, j/k, bring me a broken\nand I will fix it."
     }
+    
     self:addTextbox(tq)
   end
 

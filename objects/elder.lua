@@ -28,8 +28,8 @@ function entity:new(x,y)
   function e:onAction()
     local tq ={
       "I am the Village Elder.",
-      "Go to the Temple of Artemis and ask for her gift.",
-      "The Temple is located on top of Mt. Ida."
+      "Go to the Temple of Artemis and\nask for her gift.",
+      "The Temple is located on top of\nMt. Ida."
     }
     
     self:addTextbox(tq)

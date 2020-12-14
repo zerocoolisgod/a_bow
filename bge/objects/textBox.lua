@@ -36,8 +36,8 @@ function obj:new(x, y, w, h, t)
   tb.r = 0                -- default (0),  Orientation (radians).
   tb.sx = 1               -- default (1)  Scale factor (x-axis).
   tb.sy = 1               -- default (sx)  -- Scale factor (y-axis).
-  tb.ox = 0               -- default (0)  -- Origin offset (x-axis).
-  tb.oy = 0               -- default (0)  -- Origin offset (y-axis).
+  tb.ox = -8               -- default (0)  -- Origin offset (x-axis).
+  tb.oy = -8               -- default (0)  -- Origin offset (y-axis).
   tb.kx = 0               -- default (0)  -- Shearing factor (x-axis).
   tb.ky = 0               -- default (0)  -- Shearing factor (y-axis).
 

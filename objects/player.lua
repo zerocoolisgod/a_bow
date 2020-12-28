@@ -79,11 +79,12 @@ function entity:new(x,y)
     local ry = self.pos.y + (self.size.h / 2)
 
     local dir = self:getDirection()
-    if dir == "up" then ry = self.pos.y - 4 end
-    if dir == "down" then ry = (self.pos.y + self.size.h) + 4 end
-    if dir == "left" then rx = self.pos.x - 4 end
-    if dir == "right" then rx = (self.pos.x + self.size.w) + 4 end
-    -- self.dbox = {x=rx,y=ry,w=1,h=1}
+    local dist = 2
+    if dir == "up" then ry = self.pos.y - dist end
+    if dir == "down" then ry = (self.pos.y + self.size.h) + dist end
+    if dir == "left" then rx = self.pos.x - dist end
+    if dir == "right" then rx = (self.pos.x + self.size.w) + dist end
+    -- self.dbox = {x=rx, y=ry, w=1, h=1}
     local o = BGE.collisionSystem:getEntityAtPoint(self,rx,ry)
     if o and o.group == "npc" then
       o:onAction()

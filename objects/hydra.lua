@@ -30,7 +30,12 @@ function entity:new(x,y)
       "I am the Hydra!",
       "Now You DIE!!"
     }
-    self:addTextbox(tq)
+    if BGE.gameData:getData("winGame") then
+      BGE.gameStateSystem:setState("winGame")
+    else
+      self:addTextbox(tq)
+      BGE.gameData:setData("winGame", true)
+    end
   end
 
 

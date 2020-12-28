@@ -35,10 +35,15 @@ function entity:new(x,y)
         "I am an Enemy!!",
         "Now you DIE!!"
       }
-      self.remove = true
+      --self.remove = true
     end
 
-    self:addTextbox(tq)
+    if BGE.gameData:getData("playerDeath") then
+      BGE.gameStateSystem:setState("playerDeath")
+    else
+      self:addTextbox(tq)
+      BGE.gameData:setData("playerDeath", true)
+    end
     
   end
 

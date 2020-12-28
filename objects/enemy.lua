@@ -37,14 +37,8 @@ function entity:new(x,y)
       }
       --self.remove = true
     end
-
-    if BGE.gameData:getData("playerDeath") then
-      BGE.gameStateSystem:setState("playerDeath")
-    else
-      self:addTextbox(tq)
-      BGE.gameData:setData("playerDeath", true)
-    end
-    
+    self:addTextbox(tq)
+    BGE.gameData:setData("startCombat", true)
   end
 
 

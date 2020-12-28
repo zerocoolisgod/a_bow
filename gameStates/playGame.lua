@@ -28,6 +28,7 @@ function state:update(dt)
   else 
     self.room:update(dt)
     self:checkForTextbox()
+    self:chechStateChange()
   end
 end
 
@@ -98,6 +99,21 @@ end
 
 function state:drawTextbox()
   self.textBox:draw()
+end
+
+function state:chechStateChange()
+  if BGE.gameData:getData("winGame") then
+    BGE.gameStateSystem:setState("winGame")
+  end
+  
+  if BGE.gameData:getData("playerDeath") then
+    BGE.gameStateSystem:setState("playerDeath")
+  end
+
+  if BGE.gameData:getData("startCombat") then
+    BGE.gameStateSystem:setState("shooterState")
+  end
+
 end
 
 return state

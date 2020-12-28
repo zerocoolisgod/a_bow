@@ -17,6 +17,8 @@ function state:init()
   BGE.entitySystem:addEntity(e)
   
   self.eTimer = 5
+  self.spawned = 0
+  BGE.gameData:setData("startCombat", false) 
 end
 
 
@@ -106,7 +108,12 @@ function state:drawTextbox()
   self.textBox:draw()
 end
 
+
 function state:updateSpawner(dt)
+  if self.spawned > 4 then
+    BGE.gameStateSystem:setState("playGame")
+  end
+
   self.eTimer = self.eTimer - dt
   if self.eTimer < 0 then
     local vs = BGE.camera:getViewSize()
@@ -115,8 +122,9 @@ function state:updateSpawner(dt)
     local e = BGE.resourceManager:getNewEntity("enemyShip", posX, posY)
     BGE.entitySystem:addEntity(e)
     self.eTimer = 4 * math.random()
+    self.spawned = self.spawned + 1
   end 
-  print(self.eTimer)
+  --print(self.eTimer)
 end
 
 

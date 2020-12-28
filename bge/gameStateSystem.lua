@@ -47,6 +47,23 @@ function gsm:addState(id, state)
 end
 
 
+function gsm:loadStates(path)
+  -- takes every state in $path and adds it to
+  -- BGE
+  local dir = love.filesystem.getDirectoryItems(path)
+  local id
+  print(path)
+
+  for i,v in ipairs(dir) do
+    if string.sub(dir[i],-4) == '.lua' then
+      id = string.sub(dir[i],1,-5)
+      fullPath = path.."."..id
+      BGE.gameStateSystem:addState(id,require(fullPath))
+    end
+  end
+end
+
+
 function gsm:keypressed(key, isrepeat)
 	self.states[self.currentState]:keypressed(key, isrepeat)
 end

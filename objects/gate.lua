@@ -19,7 +19,7 @@ function entity:new(x, y, w, h, prop)
     BGE.gameData:setData("nextMap", self.mapDestination)
     BGE.gameData:setData("playerSpawn", self.playerSpawn)
     BGE.gameData:setData("playerFace", self.playerFace)
-    BGE.gameStateSystem:setState("mapChange")
+    BGE.gameData:setData("mapChange", true)
   end
 
   return e

@@ -26,9 +26,10 @@ function state:update(dt)
       BGE.gameData:setData("textBoxData",nil)
     end
   else 
+    self:chechStateChange()
     self.room:update(dt)
     self:checkForTextbox()
-    self:chechStateChange()
+    
   end
 end
 
@@ -112,6 +113,11 @@ function state:chechStateChange()
 
   if BGE.gameData:getData("startCombat") then
     BGE.gameStateSystem:setState("shooterState")
+    --BGE.gameStateSystem:setState("combat")
+  end
+
+  if BGE.gameData:getData("mapChange") then
+    BGE.gameStateSystem:setState("mapChange")
   end
 
 end

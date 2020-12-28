@@ -5,6 +5,7 @@ local state={}
 
 function state:init()
   self.tmr = 0.3
+  BGE.gameData:setData("startCombat", false) 
 end
 
 

@@ -7,6 +7,7 @@ function state:init()
   self.tmr = 0.3
   BGE.gameData:setData("playerDeath", false)
   BGE.gameData:setData("winGame", false)
+  BGE.gameData:setData("mapChange", false)
 end
 
 

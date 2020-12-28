@@ -9,8 +9,13 @@ function state:init()
   local p = BGE.resourceManager:getNewEntity("ship", 32, 100)
   local e = BGE.resourceManager:getNewEntity("enemyShip", 300, 100)
   
+  BGE.camera:setFocus(nil)
+  BGE.camera:resetPos ()
+  
+  BGE.entitySystem:clearEnts()
   BGE.entitySystem:addEntity(p)
   BGE.entitySystem:addEntity(e)
+  
   self.eTimer = 5
 end
 

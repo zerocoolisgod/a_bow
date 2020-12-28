@@ -18,19 +18,13 @@ local why = "wtf"
 
 
 
-
 -------------------------------------------------------------------------------
 -- Load Function
 -------------------------------------------------------------------------------
 function love.load(arg)
   BGE:load()
-  BGE.gameStateSystem:addState("loadGame", require("gamestates.loadGame"))
-  BGE.gameStateSystem:addState("mapChange", require("gamestates.mapChange"))
-  BGE.gameStateSystem:addState("playGame", require("gamestates.playGame"))
-  BGE.gameStateSystem:addState("combat", require("gamestates.combat"))
-  BGE.gameStateSystem:addState("winGame", require("gamestates.winGame"))
-  BGE.gameStateSystem:addState("playerDeath", require("gamestates.playerDeath"))
-
+  
+  BGE.gameStateSystem:loadStates("gameStates/")
   BGE:setUseGameStates(true)
   BGE.gameStateSystem:setState("loadGame")
 end

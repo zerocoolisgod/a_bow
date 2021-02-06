@@ -35,10 +35,9 @@ function entity:new(x,y)
         "I am an Enemy!!",
         "Now you DIE!!"
       }
-      --self.remove = true
+      BGE.gameData:setData("startCombat", true)
     end
     self:addTextbox(tq)
-    BGE.gameData:setData("startCombat", true)
   end
 
 
